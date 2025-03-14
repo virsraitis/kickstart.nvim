@@ -1007,6 +1007,10 @@ require('lazy').setup({
       'MunifTanjim/nui.nvim',
       -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
     },
+    config = function()
+      vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left toggle<CR>', {})
+      vim.keymap.set('n', '<leader>bf', ':Neotree buffers reveal float<CR>', {})
+    end,
   },
 }, {
   ui = {
